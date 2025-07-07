@@ -30,6 +30,7 @@ public class number_game {
         while (guess != randomNumber);
 
             System.out.println( "Congratulations! You've guessed the number " + randomNumber + " in " + attempts + " attempts.");
+            attempts=1;
             System.out.println("Press 1 to play again");
             game = sc.nextInt();
             if(game!=1)
