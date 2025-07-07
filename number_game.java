@@ -18,11 +18,11 @@ public class number_game {
             System.out.print("Enter your guess: ");
             guess = sc.nextInt();
             if (guess < randomNumber){
-                System.out.println("Too low!");
+                System.out.println("Warmer");
             attempts++;
             }
             else if (guess > randomNumber){
-                System.out.println("Too high!");
+                System.out.println("Colder");
                 attempts++;
             }
         }
