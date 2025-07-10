@@ -41,12 +41,13 @@ public class number_game {
             } while (guess != randomNumber);
 
             if(guess==randomNumber){
-            System.out.println("You have guessed the number in " + (11-attempts) + "attempts.");
+            System.out.println("You have guessed the number in " + (10-attempts) + " attempts.");
+            int score=(100 - (10*attempts));
+            System.out.println("Your score :" + score);
             }
             else{
                 System.out.println("Better luck Next time");
             }
-
 
 
             System.out.println("Press 1 to play again");
