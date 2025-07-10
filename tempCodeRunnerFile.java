@@ -1,4 +1,3 @@
-            // if(max_attempts <=1){
-            //     System.out.println("No attempts lefts.");
-            //     System.out.println("The number was: " + randomNumber);
-            // }
+            // int score;
+            // score= 1000 - attempts*100;
+            // System.out.println("Here is the score : " + score);

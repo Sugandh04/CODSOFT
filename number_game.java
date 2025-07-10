@@ -9,12 +9,13 @@ public class number_game {
         int high = 100;
 
         Scanner sc = new Scanner(System.in);
-        int attempts = 1;
+
         int guess;
         int game = 1;
-        int max_attempts=10;
+
         while (game == 1) {
-            attempts = 1;
+            int attempts=10;
+
             System.out.println("Welcome to the Number Guessing Game!");
             System.out.println("You have 10 attempts at max to guess the number");        
             System.out.println("Choose a number between 1 and 100.");
@@ -24,25 +25,28 @@ public class number_game {
                 guess = sc.nextInt();
                 if (guess < randomNumber) {
                     System.out.println("Warmer");
-                    attempts++;
-                    max_attempts--;
+                    attempts--;
+
                 } else if (guess > randomNumber) {
                     System.out.println("Colder");
-                    attempts++;
-                    max_attempts--;
+                    attempts--;
+
                 }
-                if(max_attempts==1){
-                    break;
-                }
+            
+            if(attempts<1){
+                System.out.println("Out of attempts !");
+                break;
+            }
                 
             } while (guess != randomNumber);
 
-            if(max_attempts<=1){
-                System.out.println("Out of chances");
+            if(guess==randomNumber){
+            System.out.println("You have guessed the number in " + (11-attempts) + "attempts.");
             }
-            else {
-            System.out.println("Congratulations! You've guessed the number " + randomNumber + " in " + attempts + " attempts.");
+            else{
+                System.out.println("Better luck Next time");
             }
+
 
 
             System.out.println("Press 1 to play again");
