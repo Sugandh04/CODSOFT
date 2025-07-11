@@ -15,6 +15,7 @@ public class number_game {
 
         while (game == 1) {
             int attempts=10;
+            int trial=1;
 
             System.out.println("Welcome to the Number Guessing Game!");
             System.out.println("You have 10 attempts at max to guess the number");        
@@ -26,10 +27,12 @@ public class number_game {
                 if (guess < randomNumber) {
                     System.out.println("Warmer");
                     attempts--;
+                    trial++;
 
                 } else if (guess > randomNumber) {
                     System.out.println("Colder");
                     attempts--;
+                    trial++;
 
                 }
             
@@ -41,8 +44,8 @@ public class number_game {
             } while (guess != randomNumber);
 
             if(guess==randomNumber){
-            System.out.println("You have guessed the number in " + (10-attempts) + " attempts.");
-            int score=(100 - (10*attempts));
+            System.out.println("You have guessed the number in " + trial + " attempts.");
+            int score= 10*trial;
             System.out.println("Your score :" + score);
             }
             else{
