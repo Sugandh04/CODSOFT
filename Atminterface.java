@@ -37,8 +37,9 @@ public class Atminterface {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
          Bankaccount useraccount = new Bankaccount(0.0f);
-        do{
         System.out.println("Hello !");
+        boolean token=true;
+        do{
         System.out.println("What would you like to do :");
         System.out.println("1.Withdrawal");
         System.out.println("2.Deposit");
@@ -63,12 +64,13 @@ public class Atminterface {
                 useraccount.CheckBalance();
                 break;
             case 4:
+                token = false;
                 break;
             default:
                 System.out.println("Invalid input");
                 break;
         }
-        }while(true);
+        }while(token==true);
     }
 
 }
